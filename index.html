@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA & Co. — салон красоты премиум-класса</title>
+  <meta name="description" content="AURA & Co. — салон красоты премиум-класса: парикмахеры, маникюр, брови и ресницы, косметология. Онлайн-запись за 1 минуту." />
+  <meta name="theme-color" content="#0f0e0d" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Manrope', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ink: '#0f0e0d',
+            graphite: '#171513',
+            card: '#201d1a',
+            line: '#34302b',
+            champagne: '#ead7ae',
+            gold: '#c9a66b',
+            blush: '#e8c4bd',
+            cream: '#f5efe6',
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-ink text-cream font-sans antialiased">
+
+  <!-- ============ HEADER ============ -->
+  <header id="header" class="fixed top-0 inset-x-0 z-40 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 h-[72px] flex items-center justify-between">
+      <a href="#top" class="font-serif text-2xl tracking-[0.18em] font-semibold">
+        AURA<span class="text-gold"> &amp; </span>Co.
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm text-cream/80">
+        <a href="#services" class="nav-link">Услуги</a>
+        <a href="#masters" class="nav-link">Мастера</a>
+        <a href="#about" class="nav-link">О салоне</a>
+        <a href="#reviews" class="nav-link">Отзывы</a>
+        <a href="#contacts" class="nav-link">Контакты</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="tel:+77271234567" class="hidden md:flex items-center gap-2 text-sm text-cream/90 hover:text-champagne transition">
+          <i class="fa-solid fa-phone text-gold text-xs"></i> +7 (727) 123-45-67
+        </a>
+        <button data-book class="btn-gold hidden sm:inline-flex">Записаться</button>
+        <button id="burger" aria-label="Меню" class="lg:hidden w-11 h-11 rounded-full border border-line flex items-center justify-center">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-50 bg-ink/98 backdrop-blur-xl translate-x-full transition-transform duration-500 lg:hidden flex flex-col">
+    <div class="h-[72px] px-5 flex items-center justify-between">
+      <span class="font-serif text-2xl tracking-[0.18em] font-semibold">AURA<span class="text-gold"> &amp; </span>Co.</span>
+      <button id="burgerClose" aria-label="Закрыть" class="w-11 h-11 rounded-full border border-line flex items-center justify-center">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <nav class="flex-1 flex flex-col justify-center px-8 gap-6 font-serif text-4xl">
+      <a href="#services" class="m-link">Услуги</a>
+      <a href="#masters" class="m-link">Мастера</a>
+      <a href="#about" class="m-link">О салоне</a>
+      <a href="#reviews" class="m-link">Отзывы</a>
+      <a href="#contacts" class="m-link">Контакты</a>
+    </nav>
+    <div class="p-6 space-y-4">
+      <a href="tel:+77271234567" class="flex items-center justify-center gap-2 text-cream/90"><i class="fa-solid fa-phone text-gold"></i> +7 (727) 123-45-67</a>
+      <button data-book class="btn-gold w-full justify-center py-4">Записаться онлайн</button>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="relative min-h-[100svh] flex items-center overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-graphite via-ink to-[#2a211b]"></div>
+      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80"
+           alt="Интерьер салона AURA & Co." class="absolute inset-0 w-full h-full object-cover opacity-45" onerror="this.remove()" />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/70"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/40 to-transparent"></div>
+
+      <div class="relative max-w-7xl mx-auto px-5 lg:px-8 pt-28 pb-16 w-full">
+        <p class="reveal text-gold uppercase tracking-[0.35em] text-xs mb-6">Салон красоты премиум-класса</p>
+        <h1 class="reveal font-serif text-5xl sm:text-6xl lg:text-8xl leading-[1.02] max-w-4xl">
+          Красота, которая<br />начинается с <em class="text-champagne">заботы</em>
+        </h1>
+        <p class="reveal mt-6 text-cream/75 text-base sm:text-lg max-w-xl leading-relaxed">
+          Индивидуальный подход, профессиональная косметика и мастера с международным опытом. Запишитесь онлайн за пару кликов.
+        </p>
+
+        <div class="reveal mt-9 flex flex-col sm:flex-row gap-3 sm:gap-4">
+          <button data-book class="btn-gold justify-center py-4 px-8 text-base">
+            Записаться онлайн <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>
+          </button>
+          <a href="#services" class="btn-ghost justify-center py-4 px-8 text-base">Услуги и цены</a>
+        </div>
+
+        <div class="reveal mt-14 grid grid-cols-2 md:grid-cols-4 gap-5 max-w-4xl">
+          <div class="adv"><span class="adv-num">12+</span><span class="adv-txt">лет на рынке красоты</span></div>
+          <div class="adv"><span class="adv-num">15</span><span class="adv-txt">топ-мастеров</span></div>
+          <div class="adv"><span class="adv-num">4.9</span><span class="adv-txt">средний рейтинг</span></div>
+          <div class="adv"><span class="adv-num">100%</span><span class="adv-txt">премиальная косметика</span></div>
+        </div>
+      </div>
+
+      <a href="#services" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-gold/70 animate-bounce hidden md:block" aria-label="Вниз">
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section id="services" class="py-20 lg:py-28 bg-graphite">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="eyebrow">Услуги и прайс</p>
+          <h2 class="section-title">Всё для вашего образа</h2>
+          <p class="text-cream/60 mt-4">Выберите направление и запишитесь на удобное время прямо под услугой.</p>
+        </div>
+
+        <div id="serviceTabs" class="flex gap-2 overflow-x-auto no-scrollbar justify-start md:justify-center mb-10 -mx-5 px-5 md:mx-0 md:px-0"></div>
+        <div id="serviceGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6"></div>
+      </div>
+    </section>
+
+    <!-- ============ MASTERS ============ -->
+    <section id="masters" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="eyebrow">Команда</p>
+          <h2 class="section-title">Наши мастера</h2>
+          <p class="text-cream/60 mt-4">Специалисты с опытом работы в лучших салонах Европы и регулярным обучением.</p>
+        </div>
+        <div id="masterGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5"></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="py-20 lg:py-28 bg-graphite">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="relative">
+          <div class="aspect-[4/5] rounded-[2rem] overflow-hidden bg-gradient-to-br from-card to-[#3a2f26]">
+            <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=80" alt="Атмосфера салона" class="w-full h-full object-cover" loading="lazy" onerror="this.remove()" />
+          </div>
+          <div class="absolute -bottom-6 -right-2 sm:-right-6 bg-card border border-line rounded-2xl p-5 shadow-2xl max-w-[220px]">
+            <p class="font-serif text-4xl text-champagne">2012</p>
+            <p class="text-sm text-cream/60 mt-1">год основания салона в центре города</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow">О салоне</p>
+          <h2 class="section-title text-left">Пространство, где хочется остаться</h2>
+          <p class="text-cream/70 mt-6 leading-relaxed">
+            AURA &amp; Co. — это 300 м² продуманного уюта: тёплый свет, натуральные материалы, тишина и аромат свежих цветов. Мы создали место, где вы действительно отдыхаете.
+          </p>
+          <p class="text-cream/70 mt-4 leading-relaxed">
+            Работаем только с премиальными брендами — Kérastase, Olaplex, Dior Beauty, Gelish, Dr. Hauschka. Каждый инструмент проходит стерилизацию в крафт-пакетах при вас.
+          </p>
+
+          <ul class="mt-8 grid sm:grid-cols-2 gap-4">
+            <li class="about-item"><i class="fa-solid fa-mug-hot"></i><span>Авторский кофе, чай и шампанское для гостей</span></li>
+            <li class="about-item"><i class="fa-solid fa-shield-heart"></i><span>Стерильность по медицинским стандартам</span></li>
+            <li class="about-item"><i class="fa-solid fa-gem"></i><span>Премиальная профессиональная косметика</span></li>
+            <li class="about-item"><i class="fa-solid fa-heart"></i><span>Персональный консьерж на каждый визит</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REVIEWS ============ -->
+    <section id="reviews" class="py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="eyebrow">Отзывы</p>
+          <h2 class="section-title">Нам доверяют красоту</h2>
+          <div class="mt-5 inline-flex items-center gap-3 text-gold">
+            <span class="font-serif text-4xl text-champagne">4.9</span>
+            <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            <span class="text-sm text-cream/50">более 1 200 отзывов</span>
+          </div>
+        </div>
+        <div id="reviewGrid" class="grid md:grid-cols-3 gap-5"></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTS ============ -->
+    <section id="contacts" class="py-20 lg:py-28 bg-graphite">
+      <div class="max-w-7xl mx-auto px-5 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="eyebrow">Контакты</p>
+          <h2 class="section-title">Ждём вас в гости</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-6">
+          <div class="lg:col-span-2 space-y-4">
+            <div class="contact-card"><i class="fa-solid fa-location-dot"></i><div><p class="label">Адрес</p><p>г. Алматы, пр. Достык, 123</p></div></div>
+            <div class="contact-card"><i class="fa-solid fa-phone"></i><div><p class="label">Телефон</p><a href="tel:+77271234567">+7 (727) 123-45-67</a></div></div>
+            <div class="contact-card"><i class="fa-regular fa-clock"></i><div><p class="label">Часы работы</p><p>Ежедневно, 10:00 – 21:00</p></div></div>
+            <div class="flex gap-3 pt-2">
+              <a href="https://wa.me/77271234567" target="_blank" rel="noopener" class="soc" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+              <a href="https://t.me/" target="_blank" rel="noopener" class="soc" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+              <a href="https://instagram.com/" target="_blank" rel="noopener" class="soc" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <button data-book class="btn-gold w-full justify-center py-4 mt-2">Записаться онлайн</button>
+          </div>
+
+          <!-- Stylized map -->
+          <div class="lg:col-span-3 map-box relative rounded-[2rem] overflow-hidden min-h-[340px] border border-line">
+            <div class="map-grid absolute inset-0"></div>
+            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <path d="M-20 300 C 150 260, 220 180, 330 190 S 520 120, 640 60" stroke="#c9a66b" stroke-opacity=".35" stroke-width="14" fill="none" />
+              <path d="M-20 300 C 150 260, 220 180, 330 190 S 520 120, 640 60" stroke="#0f0e0d" stroke-width="2" stroke-dasharray="8 10" fill="none" />
+              <path d="M120 -20 L 260 420" stroke="#c9a66b" stroke-opacity=".2" stroke-width="10" fill="none" />
+              <path d="M420 -20 L 380 420" stroke="#c9a66b" stroke-opacity=".15" stroke-width="8" fill="none" />
+              <rect x="40" y="60" width="90" height="60" rx="8" fill="#ead7ae" fill-opacity=".05" />
+              <rect x="450" y="250" width="110" height="70" rx="8" fill="#ead7ae" fill-opacity=".05" />
+              <rect x="150" y="300" width="80" height="60" rx="8" fill="#ead7ae" fill-opacity=".05" />
+            </svg>
+            <div class="absolute left-1/2 top-[47%] -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
+              <span class="pin-pulse"></span>
+              <span class="relative w-12 h-12 rounded-full bg-gold text-ink flex items-center justify-center text-lg shadow-xl"><i class="fa-solid fa-gem"></i></span>
+              <span class="mt-2 px-3 py-1 rounded-full bg-ink/90 border border-line text-xs">AURA &amp; Co.</span>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&query=Almaty+Dostyk+123" target="_blank" rel="noopener"
+               class="absolute bottom-4 right-4 btn-ghost text-sm py-2.5 px-4 bg-ink/80 backdrop-blur">
+              Построить маршрут <i class="fa-solid fa-location-arrow ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-10 border-t border-line text-center text-sm text-cream/50 pb-28 lg:pb-10">
+    <p class="font-serif text-2xl tracking-[0.18em] text-cream mb-2">AURA<span class="text-gold"> &amp; </span>Co.</p>
+    <p>© <span id="year"></span> AURA &amp; Co. Все права защищены.</p>
+  </footer>
+
+  <!-- Sticky mobile CTA -->
+  <div id="stickyCta" class="fixed bottom-0 inset-x-0 z-30 p-3 sm:hidden bg-gradient-to-t from-ink via-ink/95 to-transparent translate-y-full transition-transform duration-300">
+    <button data-book class="btn-gold w-full justify-center py-4 text-base shadow-2xl">
+      <i class="fa-regular fa-calendar-check mr-2"></i> Записаться онлайн
+    </button>
+  </div>
+
+  <!-- ============ BOOKING MODAL ============ -->
+  <div id="booking" class="fixed inset-0 z-[60] hidden" role="dialog" aria-modal="true" aria-labelledby="bookingTitle">
+    <div id="bookingBackdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm opacity-0 transition-opacity duration-300"></div>
+
+    <div id="bookingSheet" class="absolute inset-x-0 bottom-0 sm:inset-0 sm:m-auto sm:max-w-xl sm:h-[min(760px,92vh)] h-[94svh]
+         bg-graphite border border-line sm:rounded-[2rem] rounded-t-[2rem] flex flex-col translate-y-full sm:translate-y-6 sm:opacity-0 transition-all duration-300 overflow-hidden shadow-2xl">
+
+      <!-- Header -->
+      <div class="px-5 sm:px-7 pt-5 pb-4 border-b border-line">
+        <div class="flex items-center justify-between">
+          <button id="bookingBack" class="w-10 h-10 rounded-full border border-line flex items-center justify-center hover:border-gold transition" aria-label="Назад">
+            <i class="fa-solid fa-arrow-left text-sm"></i>
+          </button>
+          <div class="text-center">
+            <h3 id="bookingTitle" class="font-serif text-2xl leading-none">Онлайн-запись</h3>
+            <p id="bookingStepLabel" class="text-xs text-cream/50 mt-1"></p>
+          </div>
+          <button id="bookingClose" class="w-10 h-10 rounded-full border border-line flex items-center justify-center hover:border-gold transition" aria-label="Закрыть">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="mt-4 flex gap-1.5" id="bookingProgress">
+          <span class="h-1 flex-1 rounded-full bg-line"></span><span class="h-1 flex-1 rounded-full bg-line"></span>
+          <span class="h-1 flex-1 rounded-full bg-line"></span><span class="h-1 flex-1 rounded-full bg-line"></span>
+        </div>
+      </div>
+
+      <!-- Body -->
+      <div id="bookingBody" class="flex-1 overflow-y-auto px-5 sm:px-7 py-5"></div>
+
+      <!-- Footer -->
+      <div id="bookingFooter" class="px-5 sm:px-7 py-4 border-t border-line bg-ink/60">
+        <div id="bookingSummary" class="text-sm text-cream/60 mb-3 min-h-[20px]"></div>
+        <button id="bookingNext" class="btn-gold w-full justify-center py-4 text-base disabled:opacity-40 disabled:cursor-not-allowed" disabled>Продолжить</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
